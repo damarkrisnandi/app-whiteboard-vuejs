@@ -27,7 +27,7 @@ export default {
   methods: {
     setCanvas() {
         this.canvas = document.getElementById("canvas");
-        this.canvas.height = 1000;
+        this.canvas.height = 600;
         this.canvas.width = 1000;
     },
     setPencil() {
