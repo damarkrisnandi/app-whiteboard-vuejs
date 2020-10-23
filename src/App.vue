@@ -1,16 +1,19 @@
 <template>
   <div id="app">
+    <app-color-picker></app-color-picker>
     <app-canvas></app-canvas>
   </div>
 </template>
 
 <script>
 import AppCanvas from './components/base/AppCanvas'
+import AppColorPicker from './components/base/AppColorPicker'
 
 export default {
   name: 'App',
   components: {
-    AppCanvas
+    AppCanvas,
+    AppColorPicker
   }
 }
 </script>
