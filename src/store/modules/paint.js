@@ -6,11 +6,13 @@ function state() {
 }
 
 const mutations = {
-    setPaint(state, { color, size }) {
+    setPaintColor(state, { color }) {
         state.color = color;
-        state.size = size;
     },
 
+    setPaintSize(state, { size }) {
+        state.size = size;
+    },
     resetPaint(state) {
         state.color = 'rgba(255, 0, 0, 1)';
         state.size = 5; 
@@ -19,11 +21,11 @@ const mutations = {
 
 const actions = {
     setColor({ commit }, { color }) {
-        commit('setPaint', { color, size: state.size });
+        commit('setPaintColor', { color });
     },
 
     setSize({ commit }, { size }) {
-        commit('setPaint', { size, color: state.color });
+        commit('setPaintSize', { size });
     },
 
     refresh({ commit }) {

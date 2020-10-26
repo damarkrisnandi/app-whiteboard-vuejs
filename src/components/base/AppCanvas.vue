@@ -34,12 +34,13 @@ export default {
         this.ctx = this.canvas.getContext("2d");
         this.ctx.lineJoin = 'round';
         this.ctx.lineCap = 'round';
-        this.ctx.lineWidth = 5;
+        this.ctx.lineWidth = parseInt(this.$store.state.paint.size);
     },
     startPainting(e) {
       const { offsetX, offsetY } = e;
       this.isPainting = true;
       this.prevPos = { offsetX, offsetY };
+      this.ctx.lineWidth = parseInt(this.$store.state.paint.size);
     },
     handleMouseMove(e) {
         if (this.isPainting) {
